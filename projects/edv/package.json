@@ -1,0 +1,9 @@
+{
+  "name": "edv-angular-utilities",
+  "description": "Utilities for angular 6+. For now theres just a responsive table test using flexbox. To use it, you need to import EdvModule in your App Root Module, and use edv-responsive-table, edv-row and edv-cell.",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^7.2.0",
+    "@angular/core": "^7.2.0"
+  }
+}

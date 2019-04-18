@@ -130,6 +130,41 @@
           }
         }
       }
+    },
+    "edv": {
+      "root": "projects/edv",
+      "sourceRoot": "projects/edv/src",
+      "projectType": "library",
+      "prefix": "edv",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/edv/tsconfig.lib.json",
+            "project": "projects/edv/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/edv/src/test.ts",
+            "tsConfig": "projects/edv/tsconfig.spec.json",
+            "karmaConfig": "projects/edv/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/edv/tsconfig.lib.json",
+              "projects/edv/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "responsive-table"
